@@ -1,0 +1,3 @@
+#!/bin/bash
+
+* * * * * touch $HOME/gitViews/personal-prjects/gnss-network/logs/log`/usr/bin/date +\%Y\%d\%m\%H\%M` 2>/dev/null

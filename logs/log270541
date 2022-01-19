@@ -1,0 +1,36 @@
+URL must start with 'ntrip:'.
+
+Version 1.51 (2009-09-11) GPL built Dec 26 2021
+Usage:
+/home/juliano/gitViews/personal-prjects/gnss-network/ntrip/./ntripclient -s server -u user ...
+ -m --mountpoint the requested data set or sourcetable filtering criteria
+ -s --server     the server name or address
+ -p --password   the login password
+ -r --port       the server port number (default 2101)
+ -u --user       the user name
+ -M --mode       mode for data request
+     Valid modes are:
+     1, h, http     NTRIP Version 2.0 Caster in TCP/IP mode
+     2, r, rtsp     NTRIP Version 2.0 Caster in RTSP/RTP mode
+     3, n, ntrip1   NTRIP Version 1.0 Caster
+     4, a, auto     automatic detection (default)
+     5, u, udp      NTRIP Version 2.0 Caster in UDP mode
+or using an URL:
+/home/juliano/gitViews/personal-prjects/gnss-network/ntrip/./ntripclient ntrip:mountpoint[/user[:password]][@[server][:port][@proxyhost[:proxyport]]][;nmea]
+
+Expert options:
+ -n --nmea       NMEA string for sending to server
+ -b --bitrate    output bitrate
+ -I --initudp    send initial UDP packet for firewall handling
+ -P --udpport    set the local UDP port
+ -S --proxyhost  proxy name or address
+ -R --proxyport  proxy port, optional (default 2101)
+
+Serial input/output:
+ -D --serdevice  serial device for output
+ -B --baud       baudrate for serial device
+ -T --stopbits   stopbits for serial device
+ -C --protocol   protocol for serial device
+ -Y --parity     parity for serial device
+ -A --databits   databits for serial device
+ -l --serlogfile logfile for serial data

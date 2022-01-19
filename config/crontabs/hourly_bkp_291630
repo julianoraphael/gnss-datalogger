@@ -1,0 +1,8 @@
+#!/bin/bash
+## Automatically generated crontab
+## Start collecting data, one minute before the next hour
+59 * * * * cd /home/juliano/gitViews/personal-prjects/gnss-network; /bin/bash -e "/home/juliano/gitViews/personal-prjects/gnss-network/collect_raw_data.sh"
+## Move PID's control file
+10 * * * * mv /home/juliano/gitViews/personal-prjects/gnss-network/PID /home/juliano/gitViews/personal-prjects/gnss-network/running_PID
+## Kill process, one minute after the complete of data collection
+01 * * * * cd /home/juliano/gitViews/personal-prjects/gnss-network;/bin/bash -e "/home/juliano/gitViews/personal-prjects/gnss-network/kill_running.sh"
